@@ -1,0 +1,51 @@
+// ==========================================================================
+// VARIABLES
+// ==========================================================================
+
+// Colors
+$color-black: #000;
+$color-white: #fff;
+$color-yellow: #24cc9a;
+$color-yellow: yellow;
+$color-gray: #555;
+
+// Typography
+$font-primary: "Inter", sans-serif;
+$font-accent: "Basteleur", "Inter";
+$font-weight-normal: 500;
+$font-weight-bold: bold;
+$letter-spacing: -0.2px;
+$font-size: 1.03rem;
+$line-height: 1.2rem;
+$news-headline-font-size: 1.1rem;
+
+// Borders
+$border-width: 2px;
+$border-color: $color-black;
+$border-radius: 20px;
+
+// Nav
+$nav-font-size: 2rem;
+$nav-btn-padding: 8px 14px;
+
+// Layout
+$col-padding: 20px;
+$col-min-width: 80px;
+
+// Scrollbar
+$scrollbar-size: 8px;
+$scrollbar-handle-bg: rgba(0, 0, 0, 0.4);
+$scrollbar-handle-hover: rgba(0, 0, 0, 0.6);
+$scrollbar-handle-active: rgba(0, 0, 0, 0.7);
+$scrollbar-radius: 4px;
+
+// Divider
+$divider-width: 2px;
+$divider-handle-width: 5px;
+$divider-handle-height: 21px;
+$divider-handle-height-hover: 30px;
+
+// Breakpoints
+$breakpoint-medium: 1099px;
+$breakpoint-small: 768px;
+$breakpoint-mobile: 480px;

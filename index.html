@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Nadja</title>
+  <script src="https://cdn.jsdelivr.net/npm/htmx.org@2.0.8/dist/htmx.min.js" integrity="sha384-/TgkGk7p307TH7EXJDuUlgG3Ce1UVolAOFopFekQkkXihi5u/6OCvVKyz1W+idaz" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/overlayscrollbars/2.10.1/styles/overlayscrollbars.min.css" />
+  <link rel="stylesheet" href="scss/main.css">
+    <!-- <link rel="stylesheet" href="scss/main.scss"> -->
+
+</head>
+<body>
+  <header class="nav" id="siteNav">
+    <div class="nav__row nav__row--hoverable">
+      <button class="nav__btn nav__btn--auto" data-hover-width="33.35vw"
+       hx-get="/index.html" hx-select=".layout" hx-target=".layout" hx-swap="outerHTML transition:true" hx-push-url="true">Nadja Bournonville</button>
+      <button class="nav__btn nav__btn--flex nav__btn--spacer" aria-hidden="true"></button>
+      <button class="nav__btn nav__btn--auto" data-hover-width="20vw" hx-push-url="true">about</button>
+      <button class="nav__btn nav__btn--auto" 
+      data-hover-width="44.6vw" hx-get="/work.html" hx-select=".layout" 
+      hx-target=".layout" hx-swap="outerHTML transition:true" hx-push-url="true">works</button>
+      <button class="nav__btn nav__btn--auto" data-hover-width="25vw"
+      hx-get="/news.html" hx-select=".layout" hx-target=".layout" 
+      hx-swap="outerHTML transition:true"
+      hx-push-url="true">news</button>
+    </div>
+    <div class="nav__row" id="subnav__row" hx-swap-oob="true">
+
+    </div>
+  </header>
+  <main class="layout" id="siteLayout" aria-live="polite">
+    <!-- Left Column: Images with captions -->
+    <section class="layout__col layout__col--no-padding no-scroll" data-col="0" 
+    style="background-image: url(img/gruene-Bilder4.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;"
+    >
+       <!-- <img src="img/8_mus_domesticus.jpg" alt="Mus Domesticus" style="object-fit: cover; height: 100vh;"> -->
+    </section>
+    <div class="layout__divider" data-divider="0"><span class="layout__divider-handle"></span></div>
+    
+    <!-- Middle Column: Buttons -->
+    <section class="layout__col layout__col--no-padding no-scroll" data-col="1" >
+      <img src="img/gruene-Bilder7.jpg" alt="Mus Domesticus" style="object-fit: cover; height: 100vh;">
+    </section>
+    <div class="layout__divider layout__divider--optional" data-divider="1"><span class="layout__divider-handle"></span></div>
+    
+    <!-- Right Column: Two-column text -->
+    <section class="layout__col layout__col--no-padding no-scroll" data-col="2" >
+      <img src="img/gruene-Bilder5.jpg" alt="Mus Domesticus" style="object-fit: cover; height: 100vh;">
+    </section>
+  </main>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/overlayscrollbars/2.10.1/browser/overlayscrollbars.browser.es6.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

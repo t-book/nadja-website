@@ -1,0 +1,86 @@
+// ==========================================================================
+// LAYOUT (BEM) - Full-height columns
+// ==========================================================================
+@use 'variables' as *;
+
+.layout {
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+  min-height: 0;
+  box-sizing: border-box;
+}
+
+// Column panels
+.layout__col {
+  flex: 1 1 0;
+  padding: $col-padding;
+  min-height: 0;
+  min-width: $col-min-width;
+  overflow: hidden;
+  background: $color-white;
+  color: $color-black;
+
+  &--no-padding {
+    padding: 0;
+  }
+
+  // OverlayScrollbars custom styling
+  .os-scrollbar {
+    --os-size: #{$scrollbar-size};
+    --os-handle-bg: #{$scrollbar-handle-bg};
+    --os-handle-bg-hover: #{$scrollbar-handle-hover};
+    --os-handle-bg-active: #{$scrollbar-handle-active};
+    --os-handle-border-radius: #{$scrollbar-radius};
+  }
+}
+
+// ==========================================================================
+// DIVIDER (draggable)
+// ==========================================================================
+
+.layout__divider {
+  flex: 0 0 $divider-width;
+  background: $color-black;
+  position: relative;
+  cursor: col-resize;
+  z-index: 10;
+
+  // Invisible wider hit area for easier grabbing
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -4px;
+    right: -4px;
+  }
+
+  &:hover,
+  &.is-dragging {
+    .layout__divider-handle {
+      background: $color-black;
+      height: $divider-handle-height-hover;
+    }
+  }
+
+  &.is-dragging {
+    background: $color-gray;
+  }
+}
+
+// The visible drag handle in the vertical middle
+.layout__divider-handle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: $divider-handle-width;
+  height: $divider-handle-height;
+  background: $color-black;
+  border-radius: 0;
+  pointer-events: none;
+  transition: background 0.15s ease;
+}
+
+

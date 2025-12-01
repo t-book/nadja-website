@@ -1,0 +1,159 @@
+// ==========================================================================
+// COLUMN CONTENT: Images
+// ==========================================================================
+@use 'variables' as *;
+
+.col-image {
+  margin: 0 0 20px 0;
+  padding: 0;
+
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+}
+
+.col-image__caption {
+  font-size: 14px;
+  margin-top: 0.5rem;
+  margin-left: 0.5rem;
+  line-height: 1.4;
+}
+
+.full-background-image {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.small-image {
+  padding: 1rem;
+
+  img {
+    width: 50%;
+    display: block;
+  }
+}
+
+// ==========================================================================
+// COLUMN CONTENT: Buttons
+// ==========================================================================
+
+.col-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.col-buttons__btn {
+  width: 100%;
+  border: $border-width solid $border-color;
+  border-radius: $border-radius;
+  background: $color-white;
+  font-size: $nav-font-size;
+  padding: $nav-btn-padding;
+  line-height: 1;
+  cursor: pointer;
+  text-align: left;
+  letter-spacing: $letter-spacing;
+
+  &:hover {
+    font-family: $font-accent;
+    font-weight: $font-weight-bold;
+  }
+  &.is_active {
+    font-family: $font-accent;
+    font-weight: $font-weight-bold;
+  }
+}
+
+.col-buttons__btn-list {
+  width: 100%;
+  border: none;
+  border-bottom: $border-width solid $border-color;
+  outline:0;
+  border-left: none;
+  border-radius: none;
+  background: $color-white;
+  font-size: $nav-font-size;
+  padding: $nav-btn-padding;
+  line-height: 1;
+  cursor: pointer;
+  text-align: left;
+  letter-spacing: $letter-spacing;
+
+  &:hover {
+    font-family: $font-accent;
+    font-weight: $font-weight-bold;
+  }
+
+  &.text-body {
+    font-size: $font-size!important;
+  }
+}
+
+// ==========================================================================
+// COLUMN CONTENT: Two-column text
+// ==========================================================================
+
+.col-text {
+  column-count: 2;
+  column-gap: 20px;
+  font-size: $font-size;
+  line-height: $line-height;
+
+  p {
+    margin: 0 0 1em 0;
+    break-inside: avoid;
+  }
+}
+
+// ==========================================================================
+// COLUMN CONTENT: News
+// ==========================================================================
+
+
+.news__container {
+  border: $border-width solid $border-color;
+  border-radius: $border-radius;
+  padding: 1rem .5rem 1rem 1rem;
+}
+
+.news__headline {
+  padding: 0;
+  font-family: $font-accent;
+  font-size: $news-headline-font-size;
+  margin: 0;
+}
+
+.news__text {
+  margin: 0em;
+}
+
+.news__date {
+  position: relative;
+  padding-left: 1.5rem;
+  margin: 0;
+}
+
+.news__date::before {
+  content: "";
+  width: 1rem;       /* size of the bullet */
+  height: 1rem;
+  background: black;
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  top: 0.05rem;
+}
+
+
+// ==========================================================================
+// COLUMN CONTENT: Work list
+// ==========================================================================
+
+.work__date {
+  display: inline-block;
+  margin-right: 1.5rem;;
+}

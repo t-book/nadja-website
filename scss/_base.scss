@@ -1,0 +1,33 @@
+// ==========================================================================
+// BASE STYLES
+// ==========================================================================
+@use 'variables' as *;
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: $font-primary;
+  font-optical-sizing: auto;
+  font-weight: $font-weight-normal;
+  font-style: normal;
+  font-size: $font-size;
+  line-height: $line-height;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  letter-spacing: $letter-spacing;
+  overflow: hidden;
+  scroll-behavior: smooth;
+}
+
+// Prevent text selection while dragging
+body.is-resizing {
+  cursor: col-resize;
+  user-select: none;
+  -webkit-user-select: none;
+}

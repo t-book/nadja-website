@@ -1,0 +1,7 @@
+// Main SCSS file - imports all partials
+@use 'variables' as *;
+@use 'base';
+@use 'nav';
+@use 'layout';
+@use 'columns';
+@use 'responsive';
